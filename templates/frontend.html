@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Desenvolvedor Front-End</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='frontend.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Chatbot Desenvolvedor Front-End</h2>
+    <!-- Exibe o histórico de mensagens -->
+    {% for msg in chat_history %}
+      {% if msg.role == "user" %}
+        <div class="message user">{{ msg.content }}</div>
+      {% elif msg.role == "assistant" %}
+        <div class="message assistant">
+          <div class="assistant-avatar">
+            <!-- Substitua pela imagem do desenvolvedor front-end -->
+            <img src="https://static.vecteezy.com/system/resources/previews/003/416/524/non_2x/frontend-developer-illustration-concept-vector.jpg" alt="Avatar Desenvolvedor Front-End">
+          </div>
+          <div class="assistant-text">
+            {{ msg.content }}
+          </div>
+          <div class="clear"></div>
+        </div>
+      {% endif %}
+    {% endfor %}
+    <!-- Formulário para enviar a mensagem -->
+    <form method="POST" action="{{ url_for('frontend_chat') }}">
+      <input type="text" name="user_input" placeholder="Fale com o desenvolvedor front-end..." autocomplete="off" />
+      <button type="submit">Enviar</button>
+    </form>
+    <p><a class="back-btn" href="{{ url_for('index') }}">← Voltar para seleção</a></p>
+  </div>
+</body>
+</html>

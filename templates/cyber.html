@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Cybersecurity Pro</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='cyber.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Chatbot Profissional de Cybersecurity</h2>
+    <!-- Exibe o histórico de mensagens -->
+    {% for msg in chat_history %}
+      {% if msg.role == "user" %}
+        <div class="message user">{{ msg.content }}</div>
+      {% elif msg.role == "assistant" %}
+        <div class="message assistant">
+          <div class="assistant-avatar">
+            <!-- Substitua por uma imagem de um avatar que remeta a segurança ou tecnologia -->
+            <img src="https://cdn-icons-png.flaticon.com/512/3063/3063824.png" alt="Avatar Cyber">
+          </div>
+          <div class="assistant-text">
+            {{ msg.content }}
+          </div>
+          <div class="clear"></div>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    <!-- Formulário para enviar a mensagem -->
+    <form method="POST" action="{{ url_for('cyber_chat') }}">
+      <input type="text" name="user_input" placeholder="Pergunte ao especialista..." autocomplete="off" />
+      <button type="submit">Enviar</button>
+    </form>
+    <p><a class="back-btn" href="{{ url_for('index') }}">← Voltar para seleção</a></p>
+  </div>
+</body>
+</html>
