@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Seleção de Personas</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Bem-vindo(a)!</h2>
+    <p>Selecione a persona desejada para iniciar a conversa:</p>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://yt3.googleusercontent.com/6BCfAqi9yIpZbHLbw9BAWySvB3XZf9r8jFqudO5nSOsHoGzLhlKrm1M1uuMCRabi_pXGDzl7=s900-c-k-c0x00ffffff-no-rj" alt="Gura">
+        <a class="btn" href="{{ url_for('gura_chat') }}">Gawr Gura</a>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/564x/61/e9/32/61e9328239d252c83147722073fa25bf.jpg" alt="Miku">
+        <a class="btn" href="{{ url_for('miku_chat') }}">Hatsune Miku</a>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3063/3063824.png" alt="Cybersecurity">
+        <a class="btn" href="{{ url_for('cyber_chat') }}">Cybersecurity Pro</a>
+      </div>
+      <div class="card">
+        <img src="https://static.vecteezy.com/system/resources/previews/003/416/524/non_2x/frontend-developer-illustration-concept-vector.jpg" alt="Front-End Developer">
+        <a class="btn" href="{{ url_for('frontend_chat') }}">Desenvolvedor Front-End</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

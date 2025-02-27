@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #E0F7FC 25%, #AFE4F2 100%);
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: #2C3E50;
+  }
+  
+  .message {
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    line-height: 1.4;
+  }
+  
+  .user {
+    background-color: #D1E7FF;
+    text-align: right;
+  }
+  
+  .assistant {
+    background-color: #FFEDC2;
+    position: relative;
+    min-height: 60px;
+  }
+  
+  .assistant-avatar {
+    float: left;
+    margin-right: 8px;
+  }
+  
+  .assistant-avatar img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .assistant-text {
+    margin-left: 56px;
+    white-space: pre-wrap; /* se quiser preservar quebras de linha */
+  }
+  
+  .clear {
+    clear: both;
+  }
+  
+  form {
+    display: flex;
+    margin-top: 1.5em;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #007BFF;
+  }
+  
+  button {
+    margin-left: 0.5em;
+    padding: 0 1.2em;
+    border: none;
+    border-radius: 8px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .back-btn {
+    display: inline-block;
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+  }
+  
+  .back-btn:hover {
+    background-color: #0056b3;
+  }
