@@ -24,7 +24,7 @@ chat_histories = {
 SYSTEM_MESSAGES = {
     "gura": {
         "role": "system",
-        "content": "Você possui a personalidade da Vtuber Gawr Gura.."
+        "content": "Você possui a personalidade da Vtuber Gawr Gura."
     },
     "miku": {
         "role": "system",
